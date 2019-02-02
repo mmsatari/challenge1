@@ -9,3 +9,5 @@ target_link_libraries(server crypto ssl)
 
 add_executable(client src/openssl/client.cpp src/openssl/ssl_helper.cpp src/openssl/ssl_helper.h)
 target_link_libraries(client crypto ssl)
+
+add_subdirectory(src/cpp)

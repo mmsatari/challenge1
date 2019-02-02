@@ -1,11 +1,39 @@
 # Writeup
+To build the cpp projects (including openssl):
+
+    mkdir build && cd build && cmake ../ && make
+
+cmake 3.5.1 and gcc 5.4.0 have been used.
+
+# Pthread
+To test the project:
+
+    src/cpp/threads
+
+ Sample output:
+
+    Please enter the number of threads to create: 5
+    Thread with id : 139820223272704 started
+    Thread with id : 139820198094592 started
+    Thread with id : 139820214880000 started
+    Thread with id : 139820206487296 started
+    Thread with id : 139820063876864 started
+    Thread with id : 139820223272704 is exiting
+    Thread with Id : 139820223272704 exited and returned : 3
+    Thread with id : 139820063876864 is exiting
+    Thread with id : 139820206487296 is exiting
+    Thread with id : 139820198094592 is exiting
+    Thread with id : 139820214880000 is exiting
+    Thread with Id : 139820214880000 exited and returned : 7
+    Thread with Id : 139820206487296 exited and returned : 5
+    Thread with Id : 139820063876864 exited and returned : 3
+    Thread with Id : 139820198094592 exited and returned : 6
+
 
 # Openssl
 ## Question 1
 
 To build the proejct:
-
-    mkdir build && cd build && cmake ../ && make
 
 To test server:
 
@@ -32,6 +60,9 @@ Sample output:
     CMakeFiles
     key.pem
     server
+
+Note: the client does not check for the authenticity of the server's certificate.
+
 # Python
 ## Question 1
 
